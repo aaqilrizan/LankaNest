@@ -46,4 +46,21 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+
+    /**
+     * Get the properties for the user.
+     */
+    public function properties()
+    {
+        return $this->hasMany(Property::class);
+    }
+
+    /**
+     * Get the appointment bookings for the user.
+     */
+    public function appointmentBookings()
+    {
+        return $this->hasMany(AppointmentBooking::class);
+    }
 }

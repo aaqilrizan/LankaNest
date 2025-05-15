@@ -26,6 +26,8 @@ new #[Layout('layouts.guest')] class extends Component
             redirect()->route('admin.dashboard');
         } elseif ($user->role === 'realtor') {
             redirect()->route('realtor.dashboard');
+        }else{
+            redirect()->route('home');
         }
 
     }

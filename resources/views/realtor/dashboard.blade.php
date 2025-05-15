@@ -22,11 +22,11 @@
                     <p class="text-gray-600">Add new properties to the platform for clients to explore.</p>
                 </a>
 
-                <a href="{{ url('/realtor/check-bookings') }}" class="w-64 bg-white shadow-lg rounded-lg p-6 transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-                    <img src="{{ asset('images/check_bookings_icon.png') }}" alt="Check Bookings" class="w-16 h-16 mx-auto mb-4">
-                    <h3 class="text-xl font-semibold mb-2">Check Bookings</h3>
-                    <p class="text-gray-600">View and manage property bookings made by clients.</p>
-                </a>
+{{--                <a href="{{ url('/realtor/check-bookings') }}" class="w-64 bg-white shadow-lg rounded-lg p-6 transform transition duration-300 hover:scale-105 hover:shadow-2xl">--}}
+{{--                    <img src="{{ asset('images/check_bookings_icon.png') }}" alt="Check Bookings" class="w-16 h-16 mx-auto mb-4">--}}
+{{--                    <h3 class="text-xl font-semibold mb-2">Check Bookings</h3>--}}
+{{--                    <p class="text-gray-600">View and manage property bookings made by clients.</p>--}}
+{{--                </a>--}}
 
                 <a href="{{ url('/realtor/check-visits') }}" class="w-64 bg-white shadow-lg rounded-lg p-6 transform transition duration-300 hover:scale-105 hover:shadow-2xl">
                     <img src="{{ asset('images/check_visits_icon.png') }}" alt="Check Visits" class="w-16 h-16 mx-auto mb-4">
