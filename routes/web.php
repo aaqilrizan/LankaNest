@@ -20,6 +20,11 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/admin/dashboard', [AdminControlller::class,'index'])->name('admin.dashboard');
     Route::get('/admin/users/create', [AdminControlller::class,'create'])->name('admin.users');
     Route::post('/admin/users/store', [AdminControlller::class,'store'])->name('admin.users.store');
+    Route::get('/admin/properties', [AdminControlller::class,'properties'])->name('admin.properties.index');
+    Route::get('/admin/properties/delete/{property}', [AdminControlller::class,'destroy'])->name('admin.properties.destroy');
+    Route::get('/admin/bookings', [AdminControlller::class,'booking'])->name('admin.booking.show');
+    Route::get('/admin/bookings/delete/{booking}', [AdminControlller::class,'destroyBooking'])->name('admin.properties.destroyBooking');
+
 });
 
 Route::middleware(['auth', 'role:realtor'])->group(function () {
@@ -42,6 +47,7 @@ Route::middleware(['auth', 'role:user'])->group(function () {
     Route::get('/properties/{property}', [CustomerController::class, 'show'])->name('properties.show');
     Route::get('/properties/book/{property}', [CustomerController::class, 'book'])->name('properties.book');
     Route::post('/customer/timeslot/book/{property}', [CustomerController::class, 'bookStore'])->name('properties.book.store');
+
 });
 
 //logout

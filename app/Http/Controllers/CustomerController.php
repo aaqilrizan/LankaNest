@@ -83,8 +83,13 @@ class CustomerController extends Controller
             'property_id' => $property->id,
             'user_id' => $user->id,
             'time_slot_id' => $timeslot->id,
-            'status' => 'booked',
+            'status' => 'confirmed',
         ]);
+
+        // Update the timeslot status to booked
+        $timeslot->status = 'booked';
+        $timeslot->save();
+
 
         return redirect()->route('properties.show', $property->id)->with('success', 'Appointment booked successfully.');
     }

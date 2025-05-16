@@ -31,6 +31,7 @@
                 <ul class="flex space-x-4 font-oswald">
                     <li><a href="{{ url('/admin/home') }}" class="text-white hover:text-gray-400">Users</a></li>
                     <li><a href="{{ url('/admin/properties') }}" class="text-white hover:text-gray-400">Properties</a></li>
+                    <li><a href="{{ url('/admin/bookings') }}" class="text-white hover:text-gray-400">Bookings</a></li>
                     <li><a href="{{ url('/logout') }}" class="text-white hover:text-gray-400">Logout</a></li>
                 </ul>
             </div>
