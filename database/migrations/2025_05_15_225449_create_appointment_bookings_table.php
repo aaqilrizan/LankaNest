@@ -18,6 +18,8 @@ return new class extends Migration
             $table->foreignId('time_slot_id')->constrained()->onDelete('cascade');
             $table->enum('status', ['pending', 'confirmed', 'cancelled'])->default('pending');
             $table->timestamps();
+
+            $table->foreign('time_slot_id')->references('id')->on('property_time_slots')->onDelete('cascade');
         });
     }
 
